@@ -1,0 +1,2 @@
+# SmartContactManager
+smart contacts manager
