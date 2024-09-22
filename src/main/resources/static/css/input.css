@@ -1,0 +1,6 @@
+/* adding tailwind directives in css */
+/* ./src/main/resources/static/css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

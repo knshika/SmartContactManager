@@ -1,0 +1,20 @@
+<!-- Thymleaf- namespace : xmlns:th="http://www.thymeleaf.org" -->
+<!-- <div class="fragment-tag" th:fragment="parent(x,y)"> -->
+<div class="fragment-tag" th:fragment="parent(content)">
+  <h1>This is parent file</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eveniet eius,
+    cum atque voluptas et repellendus odit itaque ut accusamus?
+  </p>
+  <!-- <h2>Value of x is <span th:text="${x}"></span></h2>
+  <h2>Value of y is <span th:text="${y}"></span></h2> -->
+  <div th:replace="${content}"></div>
+</div>
+
+<!-- <div th:fragment="test"></div>
+  <h1>This is parent file</h1>
+</div> -->
+
+<div class="test-tag" th:fragment="test(content)">
+  <div th:replace="${content}"></div>
+</div>

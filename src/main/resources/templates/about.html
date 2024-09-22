@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is about page</h1>
+    <hr />
+    <!-- <div class="host-tag" th:insert="~{base :: parent('one','two')}"></div> -->
+    <!-- //use replace to remove hosttag -->
+    <!-- <div
+      class="host-tag"
+      th:replace="${isLogin} ? ~{base :: parent(~{::section})} : ~{base :: test}"
+    > -->
+    <div
+      class="host-tag"
+      th:replace="${isLogin} ? ~{base :: parent(~{::#is_log_in})} : ~{base :: test(~{::#not_log_in})}"
+    >
+      <section id="is_log_in">
+        <h3>Dynamic Logged in content</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi,
+          incidunt.
+        </p>
+        <button>dynamic btn</button>
+      </section>
+
+      <section id="not_log_in">
+        <h3>Dynamic not logged in content</h3>
+      </section>
+    </div>
+  </body>
+</html>
